@@ -1,1 +1,3 @@
-The is the first testing file, with a new change.
+<<<<<<< HEAD
+The is the first testing file, with a new change, with the new change in conflict branch.
+>>>>>>> conflict
