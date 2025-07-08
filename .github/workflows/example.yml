@@ -11,4 +11,4 @@ jobs:
         
             - name: Test 2
               run: |
-                echo: "Goodbye World"    
+                echo "Goodbye World"    
