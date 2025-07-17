@@ -6,7 +6,7 @@ services:
     ports:
       - 8000:8000
     environment:
-      DATABASE_NAME: "books_db"
+      DATABASE_NAME: "books"
       DATABASE_USER: "books"
       DATABASE_PASSWORD: "books"
       DATABASE_HOST: "db"
@@ -17,7 +17,6 @@ services:
   db:
     image: postgres:17.5
     environment:
-      POSTGRES_DB: "books_db"
       POSTGRES_USER: "books"
       POSTGRES_PASSWORD: "books"
     volumes:
