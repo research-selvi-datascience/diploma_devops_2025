@@ -22,7 +22,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4  
 
-      - uses: ./.github/actions/install-dependencies
+      - uses: ./.github/actions/install-dependencies.yml
 
       - name: Run pytest
         run: pytest
@@ -33,7 +33,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - uses: ./.github/actions/install-dependencies
+      - uses: ./.github/actions/install-dependencies.yml
 
 
       - name: Run django migrate
@@ -47,7 +47,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - uses: ./.github/actions/install-dependencies
+      - uses: ./.github/actions/install-dependencies.yml
 
 
       - name: Run makemigrations
