@@ -71,17 +71,13 @@ jobs:
 
       - name: Login to GHCR
         uses: docker/login-action@v3
-        with:
-          registry: ${{  env.REGISTRY }}
-          username: ${{ github.actor }}
-#          password: ${{ secrets.GITHUB_TOKEN }}
-          password: ${{ secrets.CR_PAT }}
 
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY  }}/${{  env.IMAGE_NAME }}
+
+          images: ghcr.io/research-selvi-datascience/diploma_devops_2025
       
       - name: Build and push
         uses: docker/build-push-action@v6
@@ -90,3 +86,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags  }}
           push: true
           labels: ${{ steps.meta.outputs.labels  }}
+
