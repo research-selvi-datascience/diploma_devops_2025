@@ -90,7 +90,8 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          tags: ${{ steps.meta.outputs.tags  }}
           push: true
+          tags: ${{ steps.meta.outputs.tags  }}
+          
           labels: ${{ steps.meta.outputs.labels  }}
 
