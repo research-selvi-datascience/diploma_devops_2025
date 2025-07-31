@@ -1,3 +1,14 @@
+## [1.1.0](https://github.com/research-selvi-datascience/diploma_devops_2025/compare/v1.0.1...v1.1.0) (2025-07-31)
+
+### Features
+
+* Additions to the wokflow test files (deploy-application). ([ea506ff](https://github.com/research-selvi-datascience/diploma_devops_2025/commit/ea506ff63e1f2249db449ec4ce9a42f24c2d2570))
+
+### Bug Fixes
+
+* errors fixed in the workflow test file ([cf6a882](https://github.com/research-selvi-datascience/diploma_devops_2025/commit/cf6a8829383734b6beb99902e125605720ffaeb8))
+* errors in the workflow test file ([858efd2](https://github.com/research-selvi-datascience/diploma_devops_2025/commit/858efd2a6b2873b10f11a2117267b1032eab4b99))
+
 ## [1.0.1](https://github.com/research-selvi-datascience/diploma_devops_2025/compare/v1.0.0...v1.0.1) (2025-07-31)
 
 ### Bug Fixes
