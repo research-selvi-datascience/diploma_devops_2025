@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/research-selvi-datascience/diploma_devops_2025/compare/v1.0.0...v1.0.1) (2025-07-31)
+
+### Bug Fixes
+
+* health view - (just for testing) ([5cc28fd](https://github.com/research-selvi-datascience/diploma_devops_2025/commit/5cc28fdf5198b4e41ca7190785848fe053a2e419))
+* **health view:** Fixed small issue with health view ([8bbf9d8](https://github.com/research-selvi-datascience/diploma_devops_2025/commit/8bbf9d82035185004a31609ba5c0433aa7b072de))
+
 ## 1.0.0 (2025-07-31)
 
 ### Features
