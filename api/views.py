@@ -10,7 +10,7 @@ class HealthView(APIView):
         return Response(
             {
                 "status": "ok",
-                "running": "ok"
+                "running": "yes"
             }
         )
 
