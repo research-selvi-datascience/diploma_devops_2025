@@ -95,8 +95,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - semantic-release
-#   if: github.ref == 'refs/heads/master' && needs.semantic-release.outputs.new-release-published == 'true'
-    if: github.ref == 'refs/heads/master' 
+    if: github.ref == 'refs/heads/master' && needs.semantic-release.outputs.new-release-published == 'true'
 
 
     permissions:
@@ -124,7 +123,7 @@ jobs:
 
           images: ghcr.io/research-selvi-datascience/diploma_devops_2025
           tags: |
-            type=semver,pattern=v{{version}},value=v${{ needs.semantic-release.outputs.new-release-version}}
+            type=semver,pattern={{version}},value=v${{ needs.semantic-release.outputs.new-release-version}}
       
       - name: Build and push
         uses: docker/build-push-action@v6
