@@ -1,11 +1,9 @@
 
-1. Project Overview
-
-# Book Catalog API
+# 1. Project Overview - Book Catalog API
 
 This is a Django-based Book Catalog API that allows users to manage books with operations such as listing, adding, updating, and deleting book entries. The project is containerized with Docker, supports automated deployment via a CI/CD pipeline using GitHub Actions, and is deployed to Kubernetes using Helm charts.
 
-2. API Usage Examples
+# 2. API Usage Examples
 
 ## API Endpoints
 
@@ -14,8 +12,9 @@ This is a Django-based Book Catalog API that allows users to manage books with o
 - **PUT** `/api/books/<id>/` - Update a book by ID
 - **DELETE** `/api/books/<id>/` - Delete a book by ID
 
-### Sample POST Payload
-```json
+### Sample POST Payload 
+
+```bash
 {
   "title": "Atomic Habits",
   "author": "James Clear",
@@ -23,12 +22,10 @@ This is a Django-based Book Catalog API that allows users to manage books with o
   "isbn": "1234567890123",
   "published_date": "2021-09-15"
 }
+```
 
+# 3. Local Build and Run Instructions**
 
----
-
-##### **3. Local Build and Run Instructions**
-```markdown
 ##  Local Development Setup
 
 ### Prerequisites
@@ -39,15 +36,14 @@ This is a Django-based Book Catalog API that allows users to manage books with o
 ### Run Locally with Docker Compose
 ```bash
 docker-compose up --build
+```
 
 The app will be available at http://localhost:8000/
 
 
----
+# 4. CI/CD Pipeline Explanation**
 
-##### **4. CI/CD Pipeline Explanation**
-```markdown
-## CI/CD Pipeline (GitHub Actions)
+#### CI/CD Pipeline (GitHub Actions)
 
 A CI/CD workflow is configured to:
 - Install dependencies
@@ -58,22 +54,22 @@ A CI/CD workflow is configured to:
 Trigger: Workflow runs on every push to the `main` branch.
 
 
+# 5. Kubernetes and Helm Setup
 
-5. Kubernetes and Helm Setup
-
-## Kubernetes & Helm Setup
-
+```bash
 ### Helm Chart Includes:
 - `deployment.yaml`
 - `service.yaml`
 - `ingress.yaml`
 - `values.yaml`
 - `configmap.yaml`
+```
 
 ### Deploy to Kubernetes:
 ```bash
 helm install book-catalog ./k8s/helm-chart
 
+```
 
 The services and pods can be viewed using:
 
@@ -82,12 +78,9 @@ kubectl get pods
 kubectl get ingress
 
 
+# 6. Git Version Control Notes**
 
----
-
-##### **6. Optional: Git Version Control Notes**
-```markdown
-## Version Control
+### Version Control
 
 - Git is used for source control
 - All code is hosted in [GitHub](https://github.com)
