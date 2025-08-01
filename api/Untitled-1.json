@@ -1,5 +1,7 @@
 {
     "title": "new book",
     "description": "a description",
-    "author": "an author"
+    "author": "an author",
+    "isbn": "isbn",
+    "published_date": "published date"
 }

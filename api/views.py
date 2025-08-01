@@ -36,4 +36,34 @@ class BookView(APIView):
         serializer.save()
         
         return Response(serializer.data)
+    
+    def put(self, request, *args, **kwargs):
+        pk = kwargs.get('pk')
+        if not pk:
+            return Response({"detail": "Method PUT requires 'pk' in URL."}, status=status.HTTP_400_BAD_REQUEST)
+        try:
+            book = Book.objects.get(pk=pk)
+        except Book.DoesNotExist:
+            return Response({"detail": "Book not found."}, status=status.HTTP_404_NOT_FOUND)
+        
+        serializer = BookSerializer(book, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
+    
+
+    def delete(self, request, *args, **kwargs):
+        pk = kwargs.get('pk')
+        if not pk:
+            return Response({"detail": "Method DELETE requires 'pk' in URL."}, status=status.HTTP_400_BAD_REQUEST)
+        try:
+            book = Book.objects.get(pk=pk)
+        except Book.DoesNotExist:
+            return Response({"detail": "Book deleted and no record exists."}, status=status.HTTP_404_NOT_FOUND)
+        
+        book.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+
 book_view = BookView.as_view()
