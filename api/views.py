@@ -67,3 +67,5 @@ class BookView(APIView):
 
 
 book_view = BookView.as_view()
+
+
